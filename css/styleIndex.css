@@ -1,0 +1,31 @@
+/*
+  Inicio
+*/
+body {
+  background-color: blue;
+    width: 1200px;
+    margin: 0 auto;
+    font-size: 18px;
+
+    color: white;
+}
+
+/*
+  Galeria
+*/
+main {
+
+}
+main article#imagenes {
+
+}
+
+main>article#infoRapida{
+  margin-top: 5px;
+  background-color: #343a40;
+  border-radius: 25px;
+}
+
+main>article#infoRapida>h1{
+  text-align: center;
+}
