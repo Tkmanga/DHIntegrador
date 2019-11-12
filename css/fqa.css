@@ -6,10 +6,11 @@ body {
     width: 1200px;
     margin: 0 auto;
     font-size: 18px;
-
     color: black;
 }
-
+body>h3{
+  color: white;
+}
 /*
   Galeria
 */
@@ -17,9 +18,12 @@ main {
 
 }
 
-main>img>#iconos
-{
-  width:10%;
-  margin: 10px;
-  background-color: red;
+.iconos>img{
+  width: 300px;
+  height: 350px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
 }
