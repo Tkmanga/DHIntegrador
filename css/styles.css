@@ -1,14 +1,19 @@
-#body{
-	 height: 
-	 margin:0px;
-
-
+body{
+	background-color: blue;
+  width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: black;
 }
 
-u{
-	color: #00FFFF;
-}
-strong{
-	color: blue;
+main {
+	background-color: white;
 }
 
+.navbar-nav {
+  margin-left: auto;
+}
+
+header{
+  background-color: black;
+}

@@ -2,12 +2,13 @@
   Inicio
 */
 body {
-  background-color: blue;
-    width: 1200px;
+  background-color:blue;
+    width: 800px;
     margin: 0 auto;
     font-size: 18px;
     color: black;
 }
+
 body>h3{
   color: white;
 }
@@ -15,7 +16,10 @@ body>h3{
   Galeria
 */
 main {
-
+ background-color: rgb(62, 160, 228);
+}
+#contenido{
+  margin: 10px;
 }
 
 .iconos>img{
@@ -26,4 +30,12 @@ main {
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: white;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+header{
+  background-color: black;
 }
