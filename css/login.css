@@ -35,3 +35,7 @@ header{
 header h2{
 
 }
+
+.navbar-nav {
+  margin-left: auto;
+}
