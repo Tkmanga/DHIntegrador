@@ -2,23 +2,25 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/styleIndex.css">
+  <link rel="stylesheet" href="css/shopping-cart.css">
+  <title>Carrito</title>
+
 </head>
 
-<body>
+<body class="container">
+
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="index.html">CompreYa!</a>
+      <a class="navbar-brand" href="#">CompreYa!</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -28,42 +30,94 @@
             <a class="nav-link" href="contacto.html">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="registrarse.html">Registrarse</a>
+            <a class="nav-link" href="register.html">Registro</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="listadoProductos.html">Productos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login</a>
-          </li>
+
         </ul>
       </div>
     </nav>
   </header>
+  <div class="page-header">
+    <h1>Products
+      <div style="float: right; cursor: pointer;">
+        <span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+      </div>
+    </h1>
+  </div>
 
-  <main>
-    <div class="login-form">
-      <form action="">
-        <h2 class="text-center">Log in</h2>
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Username" required="required">
-        </div>
-        <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password" required="required">
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block">Log in</button>
-        </div>
-        <div class="clearfix">
-          <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-          <a href="#" class="pull-right">Forgot Password?</a>
-        </div>
-      </form>
-      <p class="text-center"><a href="registrarse.html">Create an Account</a></p>
+
+
+
+  <div class="row">
+    <div class="col-md-3 text-center">
+      <img src="img/carrito/remera.jpg">
+      <br>
+      T-shirt<strong> $100</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn">Add to Cart</button>
+      <a href="detalles.html" class="btn btn-info">Details</a>
     </div>
-
-
-  </main>
+    <div class="col-md-3 text-center">
+      <img src="img/carrito/pelota.jpg">
+      <br>
+      Soccer Ball<strong> $500</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn">Add to Cart</button>
+      <a href="detalles.html" class="btn btn-info">Details</a>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="img/carrito/short.jpg">
+      <br>
+      Short <strong> $150</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn">Add to Cart</button>
+      <a href="detalles.html" class="btn btn-info">Details</a>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="img/carrito/zapatos.jpg">
+      <br>
+      Dress Shoes <strong> $1200</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn">Add to Cart</button>
+      <a href="detalles.html" class="btn btn-info">Details</a>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="img/carrito/jeans.jpg">
+      <br>
+      Jeans<strong> $2000</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn">Add to Cart</button>
+      <a href="detalles.html" class="btn btn-info">Details</a>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="img/carrito/camisa.jpg">
+      <br>
+      Shirt<strong> $300</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn">Add to Cart</button>
+      <a href="detalles.html" class="btn btn-info">Details</a>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="img/carrito/lentes.jpg">
+      <br>
+      Glasses<strong> $300</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn">Add to Cart</button>
+      <a href="detalles.html" class="btn btn-info">Details</a>
+    </div>
+    <div class="col-md-3 text-center">
+      <img src="img/carrito/baloncesto.jpg">
+      <br>
+      Basketball Ball<strong> $350</strong>
+      <br>
+      <button class="btn btn-danger my-cart-btn">Add to Cart</button>
+      <a href="detalles.html" class="btn btn-info">Details</a>
+    </div>
+  </div>
+  <br>
 
 
   <footer class="page-footer font-small blue pt-4">
