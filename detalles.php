@@ -1,95 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Register</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/register.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>eCommerce</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styleIndex.css">
 </head>
 
 <body>
-
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="index.html">CompreYa!</a>
+      <a class="navbar-brand" href="index.php">CompreYa!</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="fqa.html">FQA</a>
+            <a class="nav-link" href="fqa.php">FQA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+            <a class="nav-link" href="contacto.php">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="registrarse.html">Registrarse</a>
+            <a class="nav-link" href="register.php">Registro</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="listadoProductos.html">Productos</a>
+            <a class="nav-link" href="listadoProductos.php">Productos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
+
         </ul>
       </div>
     </nav>
   </header>
-  <main>
 
-    <div class="login-form">
-      <form action="">
-        <h2 class="text-center">Register</h2>
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="First name" required="required">
+  <div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8"><img src="img/carrito/remera.jpg"></div>
+        <div class="col-sm-4">
+          <ul>
+            <li>Precio: 100</li>
+            <li>Tallas Disponibles:</li>
+            <ul>
+              <li>S</li>
+              <li>M</li>
+              <li>L</li>
+              <li>XL</li>
+            </ul>
+            <li>Colores Disponibles:</li>
+            <ul>
+              <li>Negro</li>
+              <li>Rojo</li>
+              <li>Verde</li>
+            </ul>
+            <li>Materiales:</li>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia minima debitis autem magnam numquam vitae amet doloribus iste nam perspiciatis at tenetur quis, molestias ex recusandae provident sequi consequuntur explicabo quisquam
+              quasi, ipsa adipisci! Esse quia dignissimos.</p>
+          </ul>
         </div>
-        <div class="form-group">
-          <input type="password" class="form-control" placeholder="Last name" required="required">
+      </div>
+      <h4>Otros productos que quizas te interesen: </h4>
+      <div class="row">
+        <div class=" col-6 col-md-3">
+          <a href="detalles.html"><img src="img/carrito/pelota.jpg" width="100px"></a>
         </div>
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Email adress" required="required">
+        <div class=" col-6 col-md-3">
+          <a href="detalles.html"><img src="img/carrito/short.jpg" width="100px"></a>
         </div>
-        <div class="form-group">
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gender" value="option1">
-            <span class="form-check-label">Male</span>
-          </label>
-          <label class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="gender" value="option2">
-            <span class="form-check-label">Female</span>
-          </label>
+        <div class=" col-6 col-md-3">
+          <a href="detalles.html"><img src="img/carrito/zapatos.jpg" width="100px"></a>
         </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label>City</label>
-            <input type="text" class="form-control">
-          </div>
-          <div class="form-group col-md-6">
-            <label>Country</label>
-            <select id="inputState" class="form-control">
-              <option> Choose...</option>
-              <option>Brazil</option>
-              <option selected="">Argentina</option>
-              <option>France</option>
-              <option>Russia</option>
-            </select>
-          </div>
+
+        <div class=" col-6 col-md-3">
+          <a href="detalles.html"><img src="img/carrito/jeans.jpg" width="100px"></a>
         </div>
-        <div class="form-group">
-          <label>Create password</label>
-          <input class="form-control" type="password">
-        </div>
-        <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block">Register</button>
-        </div>
-        <div class="border-top card-body text-center">Have an account? <a href="">Log In</a></div>
-      </form>
+
+      </div>
     </div>
-  </main>
+  </div>
 
 
   <footer class="page-footer font-small blue pt-4">

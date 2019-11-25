@@ -22,19 +22,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="fqa.html">FQA</a>
+            <a class="nav-link" href="fqa.php">FQA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+            <a class="nav-link" href="contacto.php">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="registrarse.html">Registrarse</a>
+            <a class="nav-link" href="registrarse.php">Registrarse</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="listadoProductos.html">Productos</a>
+            <a class="nav-link" href="listadoProductos.php">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
+            <a class="nav-link" href="login.php">Login</a>
           </li>
         </ul>
       </div>

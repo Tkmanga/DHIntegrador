@@ -12,26 +12,26 @@
 <body>
 	<header>
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="index.html">CompreYa!</a>
+    <a class="navbar-brand" href="index.php">CompreYa!</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="fqa.html">FQA</a>
+          <a class="nav-link" href="fqa.php">FQA</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="contacto.html">Contacto</a>
+          <a class="nav-link active" href="#">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="registrarse.html">Registrarse</a>
+          <a class="nav-link" href="registrarse.php">Registrarse</a>
         </li>
 				<li class="nav-item">
-					<a class="nav-link" href="listadoProductos.html">Productos</a>
+					<a class="nav-link" href="listadoProductos.php">Productos</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="login.html">Login</a>
+					<a class="nav-link" href="login.php">Login</a>
 				</li>
       </ul>
     </div>
