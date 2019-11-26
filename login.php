@@ -1,6 +1,62 @@
 <!DOCTYPE html>
 <?php
+$errores=[];
 
+$email = "";
+$password = false;
+
+if ($_POST)
+{
+  if (isset($_POST["email"]))
+  {
+    if(empty($_POST["email"]))
+    {
+      $errores["email"]="tenes que llenar este campo";
+    }
+    elseif (!filter_var($_POST["email"],FILTER_VALIDATE_EMAIL))
+    {
+      $errores["email"] = "Este no es un email valido";
+    }
+    else
+    {
+      $email = $_POST["email"];
+    }
+  }
+  $password = validarPassword();
+
+  if (validarEmail($email) && $password) {
+      header("location:shopping-cart.php");
+  }
+}
+
+function validarEmail($email) {
+  $base = file_get_contents("json/usuarios.json");
+  $datos = json_decode($base,true);
+  $user=[];
+  foreach($datos as $key => $value){
+    if(isset($key["email"]) && $key["email"]==$_POST["email"]){
+      return true;
+    }else {
+      $errores["email"]="el usuario no existe";
+    }
+  }
+}
+
+function validarPassword() {
+  $base = file_get_contents("json/usuarios.json");
+  $datos = json_decode($base,true);
+  $user=[];
+  foreach($datos as $key => $value){
+    if(isset($key["password"])){
+      if (password_verify($_POST["password"], $key["password"])) {
+        return true;
+      }else {
+        $errores["password"]="la contraseña no cuadra";
+        return false;
+      }
+    }
+  }
+}
  ?>
 
 <html lang="en">
@@ -46,17 +102,21 @@
   </header>
 
   <main>
-    <div class="login-form">
-      <form action="" method="post">
+    <div class="login-form" >
+      <form action="login.php" method="POST">
         <h2 class="text-center">Log in</h2>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Username" required="required">
+          <label for="email">Email</label>
+          <input type="email" name="email" class="form-control" placeholder="Username" required="required">
+          <small><?= (isset($errores['email'])) ? $errores['email'] : "" ?></small>
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password" required="required">
+          <label for="password">Password</label>
+          <input type="password" name="password" class="form-control" placeholder="Password" required="required">
+          <small><?= (isset($errores['password'])) ? $errores['password'] : "" ?></small>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-block">Log in</button>
+          <input type="submit"  value="submit">
         </div>
         <div class="clearfix">
           <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
