@@ -94,17 +94,17 @@ if ($_POST)
 
 function crearUsuario($nombre,$apellido,$email,$password) {
   $usuario = [
-		"nombre"=>$nombre,
+		"nombre"=>trim($nombre),
 		"apellido"=>$apellido,
     "email"=>$email,
     "password" => password_hash($password,PASSWORD_DEFAULT)
   ];
-
+  //PHP_EOL al final y APPEND PARA CONCATENAR AL FINAL para el login  explode
   $base = file_get_contents("json/usuarios.json");
   $datos = json_decode($base,true);
   $datos[]=$usuario;
   $jsonFinal = json_encode($datos);
-  file_put_contents("json/usuarios.json",$jsonFinal);
+  file_put_contents("json/usuarios.json",$jsonFinal . PHP_EOL, FILE_APPEND)
 }
 
 ?>

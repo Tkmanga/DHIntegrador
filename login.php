@@ -48,6 +48,7 @@ function validarPassword() {
   $user=[];
   foreach($datos as $key => $value){
     if(isset($key["password"])){
+      //ubicamos primero el registro en base al MAIL del usuario y despues buscamos y comparamos el password de ESE registro 
       if (password_verify($_POST["password"], $key["password"])) {
         return true;
       }else {
