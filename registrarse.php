@@ -99,12 +99,12 @@ function crearUsuario($nombre,$apellido,$email,$password) {
     "email"=>$email,
     "password" => password_hash($password,PASSWORD_DEFAULT)
   ];
-  //PHP_EOL al final y APPEND PARA CONCATENAR AL FINAL para el login  explode
+
   $base = file_get_contents("json/usuarios.json");
   $datos = json_decode($base,true);
   $datos[]=$usuario;
   $jsonFinal = json_encode($datos);
-  file_put_contents("json/usuarios.json",$jsonFinal . PHP_EOL, FILE_APPEND)
+  file_put_contents("json/usuarios.json",$jsonFinal);
 }
 
 ?>
@@ -167,16 +167,15 @@ function crearUsuario($nombre,$apellido,$email,$password) {
 			</div>
 			<div class="form-group">
 				<label for="email">Correo Electronico</label>
-				<input type="text" name="email" class="form-control" id="inputCorreo" placeholder="Escriba aqui su email" value="<?=$email?>" required>
+				<input type="email" name="email" class="form-control" id="inputCorreo" placeholder="Escriba aqui su email" value="<?=$email?>" required>
 				<small><?= (isset($errores['email'])) ? $errores['email'] : "" ?></small>
 			</div>
 
 			<div class="form-group">
 				<label for="password">Contraseña</label>
-				<input type="text" name="password" class="form-control" id="password" placeholder="Escriba su Contraseña" required>
+				<input type="password" name="password" class="form-control" id="password" placeholder="Escriba su Contraseña" required>
 				<small><?= (isset($errores['password'])) ? $errores['password'] : "" ?></small>
 			</div>
-			<?= count($errores) ?>
 			<p>
 				Al crear una cuenta aceptas nuestras Condiciones de uso y Aviso de Privacidad.
 			</p>

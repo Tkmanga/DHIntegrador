@@ -17,47 +17,44 @@ if ($_POST)
     {
       $errores["email"] = "Este no es un email valido";
     }
+    elseif (!validarUsuario())
+    {
+      $errores["email"]="Hubo un error en la contraseña o el usuario, intente nuevamente.";
+    }
     else
     {
       $email = $_POST["email"];
     }
-  }
-  $password = validarPassword();
-
-  if (validarEmail($email) && $password) {
+    if (count($errores==0)) {
       header("location:shopping-cart.php");
-  }
-}
-
-function validarEmail($email) {
-  $base = file_get_contents("json/usuarios.json");
-  $datos = json_decode($base,true);
-  $user=[];
-  foreach($datos as $key => $value){
-    if(isset($key["email"]) && $key["email"]==$_POST["email"]){
-      return true;
-    }else {
-      $errores["email"]="el usuario no existe";
     }
   }
 }
 
-function validarPassword() {
+
+function validarUsuario()
+{
   $base = file_get_contents("json/usuarios.json");
   $datos = json_decode($base,true);
-  $user=[];
-  foreach($datos as $key => $value){
-    if(isset($key["password"])){
-      //ubicamos primero el registro en base al MAIL del usuario y despues buscamos y comparamos el password de ESE registro 
-      if (password_verify($_POST["password"], $key["password"])) {
-        return true;
-      }else {
-        $errores["password"]="la contraseña no cuadra";
-        return false;
+  foreach ($datos as $key)
+  {
+    if (isset($key["email"]))
+    {
+      if ($key["email"]==$_POST["email"])
+      {
+        if (password_verify($_POST["password"],$key["password"])) {
+          return true;
+        }
       }
     }
+    else
+    {
+      return false;
+    }
   }
 }
+
+
  ?>
 
 <html lang="en">
@@ -108,12 +105,13 @@ function validarPassword() {
         <h2 class="text-center">Log in</h2>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" name="email" class="form-control" placeholder="Username" required="required">
+          <input type="text" name="email" class="form-control" placeholder="Username" >
+
           <small><?= (isset($errores['email'])) ? $errores['email'] : "" ?></small>
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" name="password" class="form-control" placeholder="Password" required="required">
+          <input type="password" name="password" class="form-control" placeholder="Password" >
           <small><?= (isset($errores['password'])) ? $errores['password'] : "" ?></small>
         </div>
         <div class="form-group">
@@ -126,8 +124,6 @@ function validarPassword() {
       </form>
       <p class="text-center"><a href="registrarse.html">Create an Account</a></p>
     </div>
-
-
   </main>
 
 
