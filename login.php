@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+session_start();
 $errores=[];
 
 $email = "";
@@ -54,8 +55,19 @@ function validarUsuario()
   }
 }
 
+//INICIO Session
 
- ?>
+$_SESSION["datos"]="email";
+$_SESSION["datos"]="password";
+
+                  if(isset($_POST['recordarme']) && $_POST['recordarme'] == 'on') {
+                      // time()
+                      setcookie('emailUsuario', $datos['email'], time() + 60 * 60 * 24 * 7);
+                      setcookie('passUsuario', $datos['password'], time() + 60 * 60 * 24 * 7);
+                  }
+            //      header("Location: listadoProductos.php");
+
+?>
 
 <html lang="en">
 
@@ -117,8 +129,15 @@ function validarUsuario()
         <div class="form-group">
           <input type="submit"  value="submit">
         </div>
+
         <div class="clearfix">
-          <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+
+
+
+  <label class="pull-left checkbox-inline"><input type="checkbox" id="recordarme" name="recordarme"> Remember me</label> </div>
+
+
+
           <a href="#" class="pull-right">Forgot Password?</a>
         </div>
       </form>

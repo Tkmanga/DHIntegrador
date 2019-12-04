@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <?php
-
+session_start();
 $errores=[];
 $nombre= "";
 $apellido="";
 $password="";
 $email = "";
+
+
 
 if ($_POST)
 {
@@ -107,6 +109,20 @@ function crearUsuario($nombre,$apellido,$email,$password) {
   file_put_contents("json/usuarios.json",$jsonFinal);
 }
 
+
+// codigo para la cookie
+$_SESSION["datos"]="email";
+$_SESSION["datos"]="password";
+
+ //$_SESSION['emailUsuario'] = $datos['email'];
+           if(isset($_POST['recordarme']) && $_POST['recordarme'] == 'on') {
+            // time() -----> Unix time
+  setcookie('emailUsuario', $datos['email'], time() + 60 * 60 * 24 * 7);
+  setcookie('passUsuario', $datos['password'], time() + 60 * 60 * 24 * 7);
+    }
+
+
+
 ?>
 <html lang="en">
 <head>
@@ -176,13 +192,26 @@ function crearUsuario($nombre,$apellido,$email,$password) {
 				<input type="password" name="password" class="form-control" id="password" placeholder="Escriba su Contraseña" required>
 				<small><?= (isset($errores['password'])) ? $errores['password'] : "" ?></small>
 			</div>
+
+
+      <div class="">
+      <label for="Foto">Foto de perfil en png o jpg </label>
+      <form enctype="multipart/form-data" action="uploader.php" method="POST">
+       <input name="uploadedfile" type="file" />
+       <input type="submit" value="submit">
+       	<input type="reset" value="reset">
+
+
+        <div class="clearfixx">
+          <label class="pull-left checkbox-inline"><input type="checkbox" id="Remember" name="Remember"> Remember me</label>
+
+
 			<p>
 				Al crear una cuenta aceptas nuestras Condiciones de uso y Aviso de Privacidad.
 			</p>
+      <br>
 
-			<input type="submit" value="submit">
-			<input type="reset" value="reset">
-		</form>
+		</form> </form> </div>
 	</main>
 
 
