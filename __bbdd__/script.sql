@@ -80,3 +80,6 @@ alter table productos
 add constraint producto_stock foreign key (stock) references stock(idStock);
 
 /*falta resolver el login para crear registros en la base de datos*/
+
+use catalogo;
+select * from productos;

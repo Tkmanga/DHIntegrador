@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+include('pdo.php');   
+ ?>
 <html lang="es">
 
 <head>

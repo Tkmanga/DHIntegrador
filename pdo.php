@@ -1,5 +1,5 @@
 <?php
-  $dsn = "mysql:host:127.0.0.1;dbname=ecommerce;port=3306";
+  $dsn = "mysql:host:127.0.0.1;dbname=movies_db;port=3306";
   $db_user = 'root';
   $db_pass = '';
 
@@ -9,5 +9,5 @@
   } catch (PDOException $e) {
     echo $e->getMessage();
   }
-  
+
  ?>
