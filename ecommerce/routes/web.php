@@ -15,6 +15,32 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+=======
+Route::get('/compreya', function () {
+    return view('index');
+});
+
+Route::get('/fqa', function () {
+    return view('fqa');
+});
+
+Route::get('/contacto', function () {
+    return view('contacto');
+});
+
+Route::get('/registrarse', function () {
+    return view('registrarse');
+});
+
+Route::get('/listadoProductos', function () {
+    return view('listadoProductos');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+>>>>>>> 9a3966a898d14e2537f7e267191a634892877409

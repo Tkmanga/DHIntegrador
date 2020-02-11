@@ -1,0 +1,50 @@
+/*
+  Inicio
+*/
+
+body {
+  background-color: blue;
+    width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: white;
+}
+
+/*
+  Galeria
+*/
+
+main {
+background-color: rgb(62, 160, 228);
+}
+
+main>article#infoRapida{
+  margin-top: 5px;
+  border-radius: 25px;
+}
+
+main>article#infoRapida>h1{
+  text-align: center;
+}
+
+section#servicios {
+  color: white;
+  text-align: center;
+}
+
+section#servicios>article{
+  height: 80px;
+}
+
+.imagen {
+  width: 100px;
+}
+
+header{
+  background-color: black;
+}
+
+
+.navbar-nav {
+  margin-left: auto;
+}
