@@ -6,6 +6,7 @@
   "\css\backgroundBlue.css"
 @endsection
 @section('main')
+  
   <artice id="imagenes">
     <div id="carouselExampleFade" class="carousel slide carousel-fade container" data-ride="carousel">
       <div class="carousel-inner row">

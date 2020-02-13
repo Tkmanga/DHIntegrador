@@ -7,6 +7,9 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="\css\app.css">
     <link rel="stylesheet" href=@yield('estilo2')>
+    <link rel="stylesheet" href=@yield('fqa')>
+
+    <link rel="stylesheet" href=@yield('listadoProductos')>
   </head>
 
   <body>
@@ -37,7 +40,9 @@
         </div>
       </nav>
     </header>
+
     @yield('main')
+
     <footer class="page-footer font-small blue pt-4">
     <div class="container-fluid text-center text-md-left">
 

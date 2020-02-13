@@ -1,0 +1,19 @@
+body{
+	background-color: blue;
+  width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: black;
+}
+
+main {
+	background-color: white;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+header{
+  background-color: black;
+}
