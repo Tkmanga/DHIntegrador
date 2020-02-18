@@ -41,6 +41,10 @@ Route::get('/login', function () {
 Route::get('/carrito',function(){
   return view('shoppingCart');
 });
+Route::get('/detalles',function(){
+  return view('detalles');
+  }
+);
 
 Auth::routes();
 
