@@ -6,7 +6,6 @@
   "\css\basico.css"
 @endsection
 @section('main')
-
   		<form action="">
   			<h1>Contacto</h1>
   			<h5> Gerente: Carlos Moran</h5>

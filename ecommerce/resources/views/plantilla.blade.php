@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="\css\app.css">
     <link rel="stylesheet" href=@yield('estilo2')>
     <link rel="stylesheet" href=@yield('fqa')>
-
     <link rel="stylesheet" href=@yield('listadoProductos')>
   </head>
 

@@ -38,6 +38,9 @@ Route::get('/listadoProductos', function () {
 Route::get('/login', function () {
     return view('login');
 });
+Route::get('/carrito',function(){
+  return view('shoppingCart');
+});
 
 Auth::routes();
 

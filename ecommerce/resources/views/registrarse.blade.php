@@ -8,31 +8,31 @@
 @section('main')
 
   		<H1>Abrir una cuenta</H1>
-  		<h4>¿Ya eres un usuario ?<a href="login.php">Inicia sesiòn</a></h4>
+  		<h4>¿Ya eres un usuario ?<a href="login">Inicia sesiòn</a></h4>
   		<br>
   		<form action="registrarse.php" method="POST">
   			<div class="form-row">
   				<div class="form-group col-md-6">
   					<label for="nombre">Nombre</label>
-  					<input type="text" name="nombre" class="form-control" id="inputnombre4" placeholder="Escriba su Nombre" value="<?=$nombre?>" required>
-  					<small><?= (isset($errores['nombre'])) ? $errores['nombre'] : "" ?></small>
+  					<input type="text" name="nombre" class="form-control" id="inputnombre4" placeholder="Escriba su Nombre" value="" required>
+  					<small></small>
   				</div>
   				<div class="form-group col-md-6">
   					<label for="apellido">Apellido</label>
-  					<input type="text" name="apellido" class="form-control" id="inputApellido4" placeholder="Escriba aqui su apellido" value="<?=$apellido?>" required>
-  					<small><?= (isset($errores['apellido'])) ? $errores['apellido'] : "" ?></small>
+  					<input type="text" name="apellido" class="form-control" id="inputApellido4" placeholder="Escriba aqui su apellido" value="" required>
+  					<small></small>
   				</div>
   			</div>
   			<div class="form-group">
   				<label for="email">Correo Electronico</label>
-  				<input type="email" name="email" class="form-control" id="inputCorreo" placeholder="Escriba aqui su email" value="<?=$email?>" required>
-  				<small><?= (isset($errores['email'])) ? $errores['email'] : "" ?></small>
+  				<input type="email" name="email" class="form-control" id="inputCorreo" placeholder="Escriba aqui su email" value="" required>
+  				<small></small>
   			</div>
 
   			<div class="form-group">
   				<label for="password">Contraseña</label>
   				<input type="password" name="password" class="form-control" id="password" placeholder="Escriba su Contraseña" required>
-  				<small><?= (isset($errores['password'])) ? $errores['password'] : "" ?></small>
+  				<small></small>
   			</div>
 
 
