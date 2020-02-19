@@ -6,7 +6,7 @@
   "\css\backgroundBlue.css"
 @endsection
 @section('listadoProductos')
-  "\css\listadoProductos.css"
+  "\css\listaProductos.css"
 @endsection
 @section('main')
 

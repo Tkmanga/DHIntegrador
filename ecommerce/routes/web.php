@@ -27,20 +27,20 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
-Route::get('/registrarse', function () {
-    return view('registrarse');
+Route::get('/registrarse', function (){
+    return view('auth/register');
 });
 
-Route::get('/listadoProductos', function () {
-    return view('listadoProductos');
-});
+Route::get('/listadoProductos', "ProductoController@listaProductos");
 
 Route::get('/login', function () {
     return view('login');
 });
+
 Route::get('/carrito',function(){
   return view('shoppingCart');
 });
+
 Route::get('/detalles',function(){
   return view('detalles');
   }
