@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('title')
-  Contacto
+  PyR
 @endsection
 @section('estilo2')
   "\css\backgroundBlue.css"
