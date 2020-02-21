@@ -39,7 +39,7 @@
     <div class="container">
       <div class="row">
         <article class="col-12 col-md-6">
-          <img class="imagen" src="img\012-online-shopping.svg" alt="img online shopping">
+          <img class="imagen" src="img\empleados\avatar.jpg" alt="img online shopping">
           <h2>Lorem ipsum dolor sit amet.</h2>
           <p>
             Distinctio nemo mollitia tempora earum officiis itaque explicabo fuga cumque, fugit aperiam magnam maxime eius quaerat sed laborum, rem nesciunt? Qui, laboriosam.
