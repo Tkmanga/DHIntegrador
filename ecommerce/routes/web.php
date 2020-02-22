@@ -31,20 +31,17 @@ Route::get('/registrarse', function (){
     return view('auth/register');
 });
 
+//Lista basica de productos sin logearse
 Route::get('/listadoProductos', "ProductoController@listaProductos");
-
+//logearse
 Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/carrito',function(){
-  return view('shoppingCart');
-});
-
-Route::get('/detalles',function(){
-  return view('detalles');
-  }
-);
+//una vez que se logea puede acceder a su carrito
+Route::get('/carrito',"ProductoController@listaProductosCliente");
+//Este seria el detalle del producto
+Route::get('/listadoProductos/{id}', "ProductoController@detalleProducto");
 
 Auth::routes();
 

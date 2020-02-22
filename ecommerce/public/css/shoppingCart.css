@@ -28,7 +28,6 @@ header{
 background-color: black;
 }
 
-
 .navbar-nav {
 margin-left: auto;
 }
@@ -39,12 +38,14 @@ margin-left: auto;
     top: -20px;
     right: 10px;
   }
-  .my-cart-icon-affix {
-    position: fixed;
-    z-index: 999;
+
+.my-cart-icon-affix {
+  position: fixed;
+  z-index: 999;
   }
-  img{
-      width: 150px;
-      height: 150px;
-      margin-top: 20px;
-  }
+
+img{
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+}

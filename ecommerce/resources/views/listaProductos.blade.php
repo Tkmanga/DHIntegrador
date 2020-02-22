@@ -9,23 +9,23 @@
   "\css\listaProductos.css"
 @endsection
 @section('main')
-
       <h1>Nuestros productos: </h1>
-      @foreach( $productos as $producto )
-    <tr>
-        <td>{{$producto->idProducto}}</td>
-        <td>{{$producto->nombre}}</td>
-        <img class="photo" src="img\productos\{{$producto->imagen}}" alt="{{$producto->nombre}}">
-        <td>
-            <a href="" class="btn btn-outline-secondary">
-                Modificar
-            </a>
-        </td>
-        <td>
-            <a href="" class="btn btn-outline-secondary">
-                Eliminar
-            </a>
-        </td>
-    </tr>
-@endforeach
+      <section id="servicios">
+        <div class="container">
+          <div class="row">
+              @foreach( $productos as $producto )
+                <article class="col-12 col-md-6 col-lg-3">
+                  <div class="photo-container">
+                    <img class="photo" src="img\productos\{{$producto->imagen}}" alt="{{$producto->nombre}}"></a>
+                  </div>
+                  <h2>{{$producto->nombre}}</h2>
+                  <h4>${{$producto->precio}}</h4>
+                  <p>
+                    {{$producto->descripcion}}
+                  </p>
+                </article>
+              @endforeach
+          </div>
+        </div>
+      </section>
 @endsection
