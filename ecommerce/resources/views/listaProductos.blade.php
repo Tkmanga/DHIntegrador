@@ -16,13 +16,10 @@
               @foreach( $productos as $producto )
                 <article class="col-12 col-md-6 col-lg-3">
                   <div class="photo-container">
-                    <img class="photo" src="img\productos\{{$producto->imagen}}" alt="{{$producto->nombre}}"></a>
+                    <img class="photo" src="img\productos\{{$producto->imagen}}" alt="{{$producto->nombre}}">
                   </div>
                   <h2>{{$producto->nombre}}</h2>
                   <h4>${{$producto->precio}}</h4>
-                  <p>
-                    {{$producto->descripcion}}
-                  </p>
                 </article>
               @endforeach
           </div>

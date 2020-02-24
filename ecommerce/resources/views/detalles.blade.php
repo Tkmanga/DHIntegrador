@@ -7,11 +7,9 @@
 @endsection
 @section('main')
   <div>
-
-
     <div class="container">
       <div class="row">
-        <div class="col-sm-8"><img src="img\productos\{{$producto->imagen}}"></div>
+        <div class="col-sm-8"><img class="photo" src="img\productos\{{$producto->imagen}}" alt="{{$producto->nombre}}"></div>
         <div class="col-sm-4">
           <ul>
             <strong>Precio</strong>
@@ -20,7 +18,7 @@
             <ul>
               <li>{{$producto->getStock->cantidad}}</li>
             </ul>
-            <li>Colores Disponibles:</li>
+            <li>Ingreso el:</li>
             <ul>
               <li>{{$producto->getStock->fecha}}</li>
             </ul>

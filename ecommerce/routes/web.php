@@ -26,7 +26,7 @@ Route::get('/fqa', function () {
 Route::get('/contacto', function () {
     return view('contacto');
 });
-
+//registrarse
 Route::get('/registrarse', function (){
     return view('auth/register');
 });
@@ -38,10 +38,63 @@ Route::get('/login', function () {
     return view('login');
 });
 
-//una vez que se logea puede acceder a su carrito
+//una vez que se logea puede acceder a la galeria y a su carrito consecuentemente
 Route::get('/carrito',"ProductoController@listaProductosCliente");
 //Este seria el detalle del producto
 Route::get('/listadoProductos/{id}', "ProductoController@detalleProducto");
+
+##ABM PARA LOS ADMINISTRADORES
+
+
+############# Marca  ############
+
+#LIST
+Route::get('/adminMarcas', 'MarcasController@index');
+#FORMULARIO AGREGAR
+Route::get('/formAgregarMarca', 'MarcasController@create');
+#ACCION AGREGAR
+Route::post('/agregarMarca', 'MarcasController@store');
+#ACCION BAJAR MARCA
+Route::get('/eliminarMarca/{id}','MarcasController@destroy');
+
+#FORMULARIO MODIFICAR MARCA
+Route::get('/formModificarMarca/{id}', 'MarcasController@edit');
+Route::post('/editarMarca/{id}','MarcasController@update');
+
+############# Categoria  ############
+
+#LIST
+Route::get('/adminMarcas', 'MarcasController@index');
+#FORMULARIO AGREGAR
+Route::get('/formAgregarMarca', 'MarcasController@create');
+#ACCION AGREGAR
+Route::post('/agregarMarca', 'MarcasController@store');
+#ACCION BAJAR MARCA
+Route::get('/eliminarMarca/{id}','MarcasController@destroy');
+
+#FORMULARIO MODIFICAR MARCA
+Route::get('/formModificarMarca/{id}', 'MarcasController@edit');
+Route::post('/editarMarca/{id}','MarcasController@update');
+
+
+############# Stock  ############
+
+#LIST
+Route::get('/adminMarcas', 'MarcasController@index');
+#FORMULARIO AGREGAR
+Route::get('/formAgregarMarca', 'MarcasController@create');
+#ACCION AGREGAR
+Route::post('/agregarMarca', 'MarcasController@store');
+#ACCION BAJAR MARCA
+Route::get('/eliminarMarca/{id}','MarcasController@destroy');
+
+#FORMULARIO MODIFICAR MARCA
+Route::get('/formModificarMarca/{id}', 'MarcasController@edit');
+Route::post('/editarMarca/{id}','MarcasController@update');
+
+
+
+
 
 Auth::routes();
 
