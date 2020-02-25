@@ -11,8 +11,4 @@ class Marca extends Model
   public $timestamps = false;
   public $guarded = [];
 
-  public function getProductos()
-  {
-      return $this->hasMany('App\Producto', 'id', 'id');
-  }
 }

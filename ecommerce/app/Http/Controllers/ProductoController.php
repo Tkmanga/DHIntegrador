@@ -68,14 +68,12 @@ class ProductoController extends Controller
     $producto->update();
   }
 
-  public function destroy($id)
+  public static function destroy($id)
   {
     $producto = Producto::find($id);
     $stock = $producto->getStock($id);
     $stock->delete();
     $producto->delete();
 
-    //Esto no se puede hacer por que tiene referencias
-    //DB::table('marcas')->truncate();
   }
 }

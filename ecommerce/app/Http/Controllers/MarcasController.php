@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Marca;
+use App\Producto;
 
 class MarcasController extends Controller
 {
@@ -48,6 +49,11 @@ class MarcasController extends Controller
   public function destroy($id)
   {
     $marca = Marca::find($id);
+    $productos = Producto::where('marca', '=', $id)->get();
+    foreach($productos as $producto){
+      $idProducto = $producto->id;
+      ProductoController::destroy($idProducto);
+    }
     $marca->delete();
 
     //Esto no se puede hacer por que tiene referencias

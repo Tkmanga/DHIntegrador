@@ -13,16 +13,16 @@ class Producto extends Model
 
   public function getMarca()
 {
-    return $this->belongsTo('App\Marca', 'id', 'id');
+    return $this->belongsTo(Marca::class, 'id');
 }
 public function getCategoria()
 {
-    return $this->belongsTo('App\Categoria', 'id', 'id');
+    return $this->belongsTo(Categoria::class, 'id');
 }
 
 public function getStock()
 {
-    return $this->belongsTo('App\Stock', 'id', 'id');
+    return $this->belongsTo(Stock::class, 'id');
 }
 
 }

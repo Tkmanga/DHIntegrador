@@ -10,4 +10,5 @@ class Categoria extends Model
     protected $id = "id";
     public $timestamps = false;
     public $guarded = [];
+    
 }
