@@ -45,6 +45,9 @@ Route::get('/listadoProductos/{id}', "ProductoController@detalleProducto");
 
 #### ABM PARA LOS ADMINISTRADORES ####
 
+Route::get('/admIndex',function(){
+    return view('admIndex');
+  });
 
 ############# Marca  ############
 
@@ -63,9 +66,7 @@ Route::get('/formModificarMarca/{id}', 'MarcasController@edit');
 Route::post('/editarMarca/{id}','MarcasController@update');
 
 ############# Categoria  ############
-Route::get('/admIndex',function(){
-  return view('admIndex');
-});
+
 #LIST
 Route::get('/adminCategorias', 'CategoriaController@index');
 #FORMULARIO AGREGAR
@@ -96,7 +97,20 @@ Route::get('/formModificarMarca/{id}', 'MarcasController@edit');
 Route::post('/editarMarca/{id}','MarcasController@update');
 
 
+############# Producto  ############
 
+#LIST
+Route::get('/adminProductos', 'ProductoController@index');
+#FORMULARIO AGREGAR
+Route::get('/formAgregarProducto', 'ProductoController@create');
+#ACCION AGREGAR
+Route::post('/agregarProducto', 'ProductoController@store');
+#ACCION BAJAR PRODUCTO
+Route::get('/eliminarProducto/{id}','ProductoController@destroy');
+
+#FORMULARIO MODIFICAR PRODUCTO
+Route::get('/formModificarProducto/{id}', 'ProductoController@edit');
+Route::post('/editarProducto/{id}','ProductoController@update');
 
 
 Auth::routes();

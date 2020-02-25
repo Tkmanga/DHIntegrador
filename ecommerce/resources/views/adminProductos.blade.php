@@ -12,9 +12,9 @@
   <thead class="thead-dark">
   <tr>
       <th>id</th>
-      <th>Marca</th>
+      <th>Producto</th>
       <th colspan="2">
-          <a href="/formAgregarMarca" class="btn btn-dark">Agregar</a>
+          <a href="/formAgregarProducto" class="btn btn-dark">Agregar</a>
       </th>
   </tr>
   </thead>
@@ -25,12 +25,12 @@
     <td>{{$producto->nombre}}</td>
 
     <td>
-        <a href="formModificarMarca/{{$producto->id}}" class="btn btn-outline-secondary">
+        <a href="formModificarProducto/{{$producto->id}}" class="btn btn-outline-secondary">
             Modificar
         </a>
     </td>
     <td>
-        <a href="eliminarMarca/{{$producto->id}}" class="btn btn-outline-secondary">
+        <a href="eliminarProducto/{{$producto->id}}" class="btn btn-outline-secondary">
             Eliminar
         </a>
     </td>

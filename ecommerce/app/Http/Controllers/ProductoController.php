@@ -35,4 +35,47 @@ class ProductoController extends Controller
     return view('adminProductos',$vac);
     
   }
+
+  public function create(){
+    return view('formAgregarProducto');
+  }
+
+  public function store(Request $request){
+    $vali = $request->validate(
+      [
+        'nombre' => 'required|min:3|max:70'
+      ]
+    );
+    $producto = new Producto;
+    $nombre = $request->nombre;
+    $producto->nombre = $nombre;
+    $producto->save();
+  }
+
+  public function edit($id)
+  {
+    $producto = Producto::find($id);
+    return  view('formModificarProducto',['producto'=>$producto]);
+  }
+
+  public function update(Request $request, $id){
+    $producto = Producto::find($id);
+    $validar = $request->validate(
+            [
+                'nombre' => 'required|min:3|max:75'
+            ]);
+    $producto->nombre = $request->nombre;
+    $producto->update();
+  }
+
+  public function destroy($id)
+  {
+    $producto = Producto::find($id);
+    $stock = $producto->getStock($id);
+    $stock->delete();
+    $producto->delete();
+
+    //Esto no se puede hacer por que tiene referencias
+    //DB::table('marcas')->truncate();
+  }
 }
