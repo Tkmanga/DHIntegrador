@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Marca;
-use DB;
-use App\Quotation;
+
 class MarcasController extends Controller
 {
   public function index(){
@@ -50,7 +49,7 @@ class MarcasController extends Controller
   {
     $marca = Marca::find($id);
     $marca->delete();
-    
+
     //Esto no se puede hacer por que tiene referencias
     //DB::table('marcas')->truncate();
   }

@@ -1,10 +1,10 @@
 @extends('layouts')
 @section('title')
-  Administracion Marca
+  Administracion Productos
 @endsection
 
 @section('h1')
-  Index
+  Administracion de productos
 @endsection
 
 @section('main')
@@ -19,18 +19,18 @@
   </tr>
   </thead>
   <tbody>
-@foreach( $marcas as $marca )
+@foreach( $productos as $producto )
 <tr>
-    <td>{{$marca->id}}</td>
-    <td>{{$marca->nombre}}</td>
+    <td>{{$producto->id}}</td>
+    <td>{{$producto->nombre}}</td>
 
     <td>
-        <a href="formModificarMarca/{{$marca->id}}" class="btn btn-outline-secondary">
+        <a href="formModificarMarca/{{$producto->id}}" class="btn btn-outline-secondary">
             Modificar
         </a>
     </td>
     <td>
-        <a href="eliminarMarca/{{$marca->id}}" class="btn btn-outline-secondary">
+        <a href="eliminarMarca/{{$producto->id}}" class="btn btn-outline-secondary">
             Eliminar
         </a>
     </td>

@@ -15,7 +15,7 @@ class ProductoController extends Controller
 
   public function detalleProducto($id)
   {
-    $producto = Producto::find($id); 
+    $producto = Producto::find($id);
     $vac = compact("producto");
     return view('detalles',$vac);
   }
@@ -28,5 +28,11 @@ class ProductoController extends Controller
     return view('shoppingCart',$vac);
   }
 
-
+  public function index()
+  {
+    $productos = Producto::all();
+    $vac = compact('productos');
+    return view('adminProductos',$vac);
+    
+  }
 }

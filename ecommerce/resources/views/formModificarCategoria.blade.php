@@ -4,11 +4,11 @@
 @endsection
 
 @section('h1')
-  Editar Marca
+  Editar Categoria
 @endsection
 @section('main')
   <div class="alert bg-light py-3">
-      <form action="/editarMarca/{{$marca->id}}" method="post">
+      <form action="/editarCategoria/{{$marca->id}}" method="post">
           @csrf
           Nombre:
           <br>

@@ -43,7 +43,7 @@ Route::get('/carrito',"ProductoController@listaProductosCliente");
 //Este seria el detalle del producto
 Route::get('/listadoProductos/{id}', "ProductoController@detalleProducto");
 
-##ABM PARA LOS ADMINISTRADORES
+#### ABM PARA LOS ADMINISTRADORES ####
 
 
 ############# Marca  ############
@@ -59,22 +59,23 @@ Route::get('/eliminarMarca/{id}','MarcasController@destroy');
 
 #FORMULARIO MODIFICAR MARCA
 Route::get('/formModificarMarca/{id}', 'MarcasController@edit');
+#ACCION EDITAR MARCA
 Route::post('/editarMarca/{id}','MarcasController@update');
 
 ############# Categoria  ############
 
 #LIST
-Route::get('/adminMarcas', 'MarcasController@index');
+Route::get('/adminCategorias', 'CategoriaController@index');
 #FORMULARIO AGREGAR
-Route::get('/formAgregarMarca', 'MarcasController@create');
+Route::get('/formAgregarCategoria', 'CategoriaController@create');
 #ACCION AGREGAR
-Route::post('/agregarMarca', 'MarcasController@store');
+Route::post('/agregarCategoria', 'CategoriaController@store');
 #ACCION BAJAR MARCA
-Route::get('/eliminarMarca/{id}','MarcasController@destroy');
+Route::get('/eliminarCategoria/{id}','CategoriaController@destroy');
 
 #FORMULARIO MODIFICAR MARCA
-Route::get('/formModificarMarca/{id}', 'MarcasController@edit');
-Route::post('/editarMarca/{id}','MarcasController@update');
+Route::get('/modificarCategoria/{id}', 'MarcasController@edit');
+Route::post('/editarCategoria/{id}','MarcasController@update');
 
 
 ############# Stock  ############
