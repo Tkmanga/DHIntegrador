@@ -21,7 +21,7 @@
       <li class="nav-item">
         <a class="nav-link" href="#dudasVendedor">Dudas Vendedor</a>
       </li>
-      //ESTE BOTON TENDRIA QUE DESPLEGAR LAS OPCIONES MIENTRAS QUE LOS DE ARRIBA REDIRIGIR 
+      <!-- ESTE BOTON TENDRIA QUE DESPLEGAR LAS OPCIONES MIENTRAS QUE LOS DE ARRIBA REDIRIGIR--> 
       <li class="nav-item dropdown align-center">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Opciones</a>
         <div class="dropdown-menu">

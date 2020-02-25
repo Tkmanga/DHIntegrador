@@ -63,7 +63,9 @@ Route::get('/formModificarMarca/{id}', 'MarcasController@edit');
 Route::post('/editarMarca/{id}','MarcasController@update');
 
 ############# Categoria  ############
-
+Route::get('/admIndex',function(){
+  return view('admIndex');
+});
 #LIST
 Route::get('/adminCategorias', 'CategoriaController@index');
 #FORMULARIO AGREGAR

@@ -140,3 +140,4 @@ insert into stock(cantidad,fecha,producto,usuario) values(500,"2014-09-09",10,5)
 insert into stock(cantidad,fecha,producto,usuario) values(400,"2013-09-09",11,4);
 insert into stock(cantidad,fecha,producto,usuario) values(500,"2014-09-09",12,5); 
 select * from stock;
+select * from categorias;
