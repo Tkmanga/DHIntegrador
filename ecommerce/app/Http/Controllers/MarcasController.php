@@ -28,6 +28,7 @@ class MarcasController extends Controller
     $nombre = $request->nombre;
     $marca->nombre = $nombre;
     $marca->save();
+    return redirect('/adminMarcas')->with('mensaje', 'Marca '.$nombre.' agregada con éxito');
   }
 
   public function edit($id)
@@ -38,23 +39,27 @@ class MarcasController extends Controller
 
   public function update(Request $request, $id){
     $marca = Marca::find($id);
+    $nombre = $request->input('nombre');
     $validar = $request->validate(
             [
                 'nombre' => 'required|min:3|max:75'
             ]);
     $marca->nombre = $request->nombre;
     $marca->update();
+    return redirect('/adminMarcas')->with('mensaje', 'Marca '.$marca->nombre.' actualizada con éxito');
   }
 
   public function destroy($id)
   {
     $marca = Marca::find($id);
+    $nombre = $marca->nombre;
     $productos = Producto::where('marca', '=', $id)->get();
     foreach($productos as $producto){
       $idProducto = $producto->id;
       ProductoController::destroy($idProducto);
     }
     $marca->delete();
+    return redirect('/adminMarcas')->with('mensaje', 'Marca '.$marca->nombre.' actualizada con éxito');;
 
     //Esto no se puede hacer por que tiene referencias
     //DB::table('marcas')->truncate();

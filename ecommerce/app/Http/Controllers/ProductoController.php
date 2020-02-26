@@ -48,7 +48,17 @@ class ProductoController extends Controller
     );
     $producto = new Producto;
     $nombre = $request->nombre;
+    $precio = $request->precio;
+    $descripcion = $request->descripcion;
+    $categoria = $request->categoria;
+    $marca = $request->marca;
+    $imagen = $request->imagen;
     $producto->nombre = $nombre;
+    $producto->precio = $precio;
+    $producto->descripcion = $descripcion;
+    $producto->categoria = $categoria;
+    $producto->marca = $marca;
+    $producto->imagen = $imagen;
     $producto->save();
   }
 
@@ -65,7 +75,14 @@ class ProductoController extends Controller
                 'nombre' => 'required|min:3|max:75'
             ]);
     $producto->nombre = $request->nombre;
+    $producto->precio = $request->precio;
+    $producto->marca = $request->marca;
+    $producto->descripcion = $request->descripcion;
+    $producto->categoria = $request->categoria;
+    $producto->imagen = $request->imagen;
+
     $producto->update();
+    return redirect('/adminProductos');
   }
 
   public static function destroy($id)

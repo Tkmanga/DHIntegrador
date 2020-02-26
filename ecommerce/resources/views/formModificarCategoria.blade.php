@@ -1,6 +1,6 @@
 @extends('layouts')
 @section('title')
-  Administracion Marca
+  Administracion Categoria
 @endsection
 
 @section('h1')
@@ -8,11 +8,11 @@
 @endsection
 @section('main')
   <div class="alert bg-light py-3">
-      <form action="/editarCategoria/{{$marca->id}}" method="post">
+      <form action="/editarCategoria/{{$categoria->id}}" method="post">
           @csrf
           Nombre:
           <br>
-          <input type="text" name="nombre" class="form-control" value="{{$marca->nombre}}">
+          <input type="text" name="nombre" class="form-control" value="{{$categoria->nombre}}">
          @error('nombre') {{$message}} @enderror
           <br>
           <button class="btn btn-dark">Guardar cambios</button>

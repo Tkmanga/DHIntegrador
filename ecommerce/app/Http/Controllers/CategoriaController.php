@@ -27,15 +27,26 @@ class CategoriaController extends Controller
       $categoria = new Categoria;
       $categoria->nombre = $request->nombre;
       $categoria->save();
+      return redirect('/adminCategorias');
     }
 
     public function destroy($id){
-      
+      $categoria = Categoria::find($id);
+      $categoria->delete();
+      return redirect('/adminCategorias');
+
     }
 
-    public function edit(){
+    public function edit($id){
+      $categoria = Categoria::find($id);
+      return  view('formModificarCategoria',['categoria'=>$categoria]);    
     }
 
-    public function update(){
+    public function update(Request $request, $id){
+      $categoria = Categoria::find($id);
+      $categoria->nombre = $request->nombre;
+      $categoria->update();
+      return redirect('/adminCategorias');
+
     }
 }

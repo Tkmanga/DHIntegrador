@@ -77,8 +77,8 @@ Route::post('/agregarCategoria', 'CategoriaController@store');
 Route::get('/eliminarCategoria/{id}','CategoriaController@destroy');
 
 #FORMULARIO MODIFICAR MARCA
-Route::get('/modificarCategoria/{id}', 'MarcasController@edit');
-Route::post('/editarCategoria/{id}','MarcasController@update');
+Route::get('/formModificarCategoria/{id}', 'CategoriaController@edit');
+Route::post('/editarCategoria/{id}','CategoriaController@update');
 
 
 ############# Stock  ############

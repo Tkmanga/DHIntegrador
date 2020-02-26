@@ -8,6 +8,7 @@
 @endsection
 
 @section('main')
+
   <table class="table table-bordered table-hover table-striped">
   <thead class="thead-dark">
   <tr>
