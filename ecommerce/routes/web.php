@@ -34,9 +34,12 @@ Route::get('/registrarse', function (){
 //Lista basica de productos sin logearse
 Route::get('/listadoProductos', "ProductoController@listaProductos");
 //logearse
+
+/*
 Route::get('/login', function () {
     return view('login');
 });
+*/
 
 //una vez que se logea puede acceder a la galeria y a su carrito consecuentemente
 Route::get('/carrito',"ProductoController@listaProductosCliente");
@@ -112,7 +115,7 @@ Route::get('/eliminarProducto/{id}','ProductoController@destroy');
 Route::get('/formModificarProducto/{id}', 'ProductoController@edit');
 Route::post('/editarProducto/{id}','ProductoController@update');
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('admin/routes', 'HomeController@admin')->middleware('admin');

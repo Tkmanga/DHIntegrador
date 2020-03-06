@@ -23,7 +23,7 @@
                 <a class="py-2 d-md-inline-block" href="/adminMarcas">Admin Marcas</a>
                 <a class="py-2 d-md-inline-block" href="/adminCategorias">Admin Categorías</a>
                 <a class="py-2 d-md-inline-block" href="/adminProductos">Admin Productos</a>
-                <a class="py-2 d-md-inline-block" href="#">Contacto</a>
+                <a class="py-2 d-md-inline-block" href="home">Cuenta</a>
             </div>
         </nav>
 

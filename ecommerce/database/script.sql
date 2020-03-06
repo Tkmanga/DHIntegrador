@@ -21,19 +21,21 @@ create table empleados(
 );
 
 /*hay que averiguar como se utiliza para autenticar usuarios en laravel*/
-create table login (
+/*
+create table users (
 	id	int unsigned not null primary key auto_increment, 
     userId int unsigned,
+    email 
     contrasenia varchar (100) not null,
     acceso bool, 
     nombreUsuario varchar(100) not null 
 );
-
+*/
 create table usuarios(
 	id int unsigned not null  primary key auto_increment, 
     nombre varchar(255) not null , 
     apellido varchar(255) not null,
-    email varchar(255) not null, 
+    email varchar(255) not null unique, 
     telefono varchar (255) not null, 
     direccion varchar (255) not null,
     avatar varchar (45) /*ACA DEBERIA IR EL AVATAR DEL USUARIO SI ELIGIO UNO*/
@@ -85,7 +87,7 @@ alter table productos
 add imagen varchar (255) not null;
 
 /*falta resolver el login para crear registros en la base de datos!!*/
-select * from productos;
+/* select * from productos;*/ 
 
 
 /*Creacion de productos para probar conectividad con el proyecto laravel*/
@@ -139,5 +141,11 @@ insert into stock(cantidad,fecha,producto,usuario) values(400,"2013-09-09",9,4);
 insert into stock(cantidad,fecha,producto,usuario) values(500,"2014-09-09",10,5); 
 insert into stock(cantidad,fecha,producto,usuario) values(400,"2013-09-09",11,4);
 insert into stock(cantidad,fecha,producto,usuario) values(500,"2014-09-09",12,5); 
-select * from stock;
-select * from categorias;
+
+use ecommerce;
+select * from users;
+
+update users set is_admin = 1 where id = 4; 
+
+
+
