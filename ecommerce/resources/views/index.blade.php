@@ -6,7 +6,11 @@
   "\css\backgroundBlue.css"
 @endsection
 @section('main')
-
+  @if (session('error'))
+      <div class="alert alert-danger">
+          {{ session('error') }}
+      </div>
+  @endif
   <artice id="imagenes">
     <div id="carouselExampleFade" class="carousel slide carousel-fade container" data-ride="carousel">
       <div class="carousel-inner row">

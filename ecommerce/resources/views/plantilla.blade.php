@@ -33,7 +33,7 @@
               <a class="nav-link" href="http://localhost:8000/listadoProductos">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://localhost:8000/login">Login</a>
+              <a class="nav-link" href="http://localhost:8000/home">Login</a>
             </li>
           </ul>
         </div>
