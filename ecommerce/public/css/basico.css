@@ -1,9 +1,9 @@
 body{
-	background-color: blue;
-  width: 800px;
+	background-color: rgb(209, 218, 249);
+  width: 1000px;
   margin: 0 auto;
   font-size: 18px;
-  color: black;
+  color:black;
 }
 
 form>* {
@@ -17,3 +17,15 @@ form>* {
 header{
   background-color: black;
 }
+
+h1{
+  color: blue;
+}
+p{
+  color: black;
+}
+
+h5{
+  color: black;
+}
+

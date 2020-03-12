@@ -2,6 +2,8 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
@@ -13,6 +15,8 @@
 
   <body>
       <header>
+        
+        <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="http://localhost:8000/compreya">CompreYa!</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,6 +42,7 @@
           </ul>
         </div>
       </nav>
+      <div> 
     </header>
 
     @yield('main')
@@ -61,16 +66,16 @@
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!">Facebook 1</a>
+              <a href="https://www.facebook.com">Facebook 1</a>
             </li>
             <li>
-              <a href="#!">Twitter 2</a>
+              <a href="https://twitter.com">Twitter 2</a>
             </li>
             <li>
-              <a href="#!">Instagram 3</a>
+              <a href="https://www.instagram.com">Instagram 3</a>
             </li>
             <li>
-              <a href="#!">Gmail 4</a>
+              <a href="https://www.gmail.com">Gmail 4</a>
             </li>
           </ul>
 
@@ -81,16 +86,16 @@
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!">Mail RRHH 1</a>
+              <a href="http://localhost:8000/contacto">Mail RRHH 1</a>
             </li>
             <li>
-              <a href="#!">Atencion empresas</a>
+              <a href="http://localhost:8000/contacto">Atencion empresas</a>
             </li>
             <li>
-              <a href="#!">Atencion particulares</a>
+              <a href="http://localhost:8000/contacto">Atencion particulares</a>
             </li>
             <li>
-              <a href="#!">Denuncias</a>
+              <a href="http://localhost:8000/contacto">Denuncias </a> 
             </li>
           </ul>
 
@@ -103,5 +108,8 @@
     </div>
 
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>

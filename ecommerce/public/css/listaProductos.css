@@ -1,5 +1,9 @@
 main {
-	background-color: rgb(62, 160, 228);
+	background-color: rgb(209, 218, 249);
+}
+
+body{
+  background-color: rgb(209,218,249); 
 }
 .vip-products {
   overflow: hidden;
@@ -12,16 +16,31 @@ header{
 }
 
 .imagen {
+  
 }
 
 section#servicios {
-  color: white;
+  color:  rgb(62, 160,228) ;
   text-align: center;
   margin-top: 20px;
+  background-color: white;
+  font-style: italic;
+  font-family: "Proxima Nova",-apple-system,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif,sans-serif;
 }
 
 section#servicios>article{
   height: 80px;
+}
+
+h1{
+  color:lightslategray;
+  font-family: "Proxima Nova",-apple-system,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif,sans-serif;
+  margin-top: 3px;
+}
+
+img{
+  height: 350;
+  
 }
 
 .photo-container {
@@ -39,4 +58,8 @@ section#servicios>article{
   position: absolute;
   height: 50px;
   left:0px;
+}
+
+.page-footer{
+  color:lightslategray;
 }

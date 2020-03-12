@@ -12,17 +12,27 @@
       <h1>Nuestros productos: </h1>
       <section id="servicios">
         <div class="container">
+
           <div class="row">
+
               @foreach( $productos as $producto )
-                <article class="col-12 col-md-6 col-lg-3">
-                  <div class="photo-container">
-                    <img class="photo" src="img\productos\{{$producto->imagen}}" alt="{{$producto->nombre}}">
+              
+                <div class="card" style="width: 12rem;">
+                  <div class="photo-container"> 
+                    
+                    <img class="card-img-top" src="img\productos\{{$producto->imagen}}" class="img-responsive" alt="{{$producto->nombre}}" >
+                  
+                  <div class="card-body">
+                  <h5>{{$producto->nombre}}</h5>
+                  <h5>  <strong> ${{$producto->precio}}  </strong>  </h5>
                   </div>
-                  <h2>{{$producto->nombre}}</h2>
-                  <h4>${{$producto->precio}}</h4>
-                </article>
+                </div>
+                 </div>
+
+
               @endforeach
           </div>
         </div>
+</div>
       </section>
 @endsection
