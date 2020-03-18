@@ -140,12 +140,17 @@ insert into stock(cantidad,fecha,producto,usuario) values(300,"2012-09-09",8,3);
 insert into stock(cantidad,fecha,producto,usuario) values(400,"2013-09-09",9,4);
 insert into stock(cantidad,fecha,producto,usuario) values(500,"2014-09-09",10,5); 
 insert into stock(cantidad,fecha,producto,usuario) values(400,"2013-09-09",11,4);
-insert into stock(cantidad,fecha,producto,usuario) values(500,"2014-09-09",12,5); 
+insert into stock(cantidad,fecha,producto,usuario) values(500,"2014-09-09",12,5);
+
+insert into stock(cantidad,fecha,producto,usuario) values(500,"2014-09-09",13,5);  
 
 use ecommerce;
 select * from users;
 
 update users set is_admin = 1 where id = 4; 
 
-
-
+use ecommerce;
+select * from users;
+select * from productos;
+select * from usuarios;
+select * from stock;

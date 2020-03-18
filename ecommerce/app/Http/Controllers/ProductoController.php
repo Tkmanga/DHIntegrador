@@ -16,7 +16,9 @@ class ProductoController extends Controller
   public function detalleProducto($id)
   {
     $producto = Producto::find($id);
-    $vac = compact("producto");
+    $numId = $id;
+    $vac = compact("producto","numId");
+
     return view('detalles',$vac);
   }
 
@@ -33,7 +35,7 @@ class ProductoController extends Controller
     $productos = Producto::all();
     $vac = compact('productos');
     return view('adminProductos',$vac);
-    
+
   }
 
   public function create(){

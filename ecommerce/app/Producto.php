@@ -24,5 +24,7 @@ public function getStock()
 {
     return $this->belongsTo(Stock::class, 'id');
 }
-
+public function getId(){
+      return $this->getId();
+}
 }
