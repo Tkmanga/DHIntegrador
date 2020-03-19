@@ -16,12 +16,12 @@
           <div class="row">
 
               @foreach( $productos as $producto )
-              
+
                 <div class="card" style="width: 12rem;">
-                  <div class="photo-container"> 
-                    
+                  <div class="photo-container">
+
                     <img class="card-img-top" src="img\productos\{{$producto->imagen}}" class="img-responsive" alt="{{$producto->nombre}}" >
-                  
+
                   <div class="card-body">
                   <h5>{{$producto->nombre}}</h5>
                   <h5>  <strong> ${{$producto->precio}}  </strong>  </h5>
@@ -33,6 +33,5 @@
               @endforeach
           </div>
         </div>
-</div>
       </section>
 @endsection

@@ -9,7 +9,7 @@
 
 @section('main')
   <div class="alert bg-light py-3">
-    <form action="/agregarProducto" method="post">
+    <form enctype="multipart/form-data" action="/agregarProducto" method="post">
         @csrf
         Nombre Producto:
         <br>
@@ -38,8 +38,12 @@
         <br>
         Imagen Producto:
         <br>
-        <img id="imagen" alt="Aqui se carga la imagen" src=""/>
-        <input type="imagen" name="imagen" id="/imagen" onchange="document.getElementById('imagen').src=this.value;" class="form-control">
+        <!--
+         <input name="uploadedfile" type="file" />
+
+         -->
+        <img id="imagen" alt="Aqui se carga la imagen" src="img\020-delivery.svg" height="100px"/>
+        <input type="imagen" name="imagen" id="/imagen" onchange="" class="form-control">
        @error('nombre') {{$message}} @enderror
         <br>
         <button class="btn btn-dark">Agregar Producto</button>

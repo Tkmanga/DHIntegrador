@@ -20,12 +20,15 @@
       <a class="list-group-item list-group-item-action" href="adminProductos">
           Panel de administración de Productos
       </a>
+      <!--
       <a class="list-group-item list-group-item-action" href="adminStock">
           Panel de administración de Stock
       </a>
+
       <a class="list-group-item list-group-item-action" href="adminUsuarios">
           Panel de administración de Usuarios
       </a>
+      -->
   </div>
 
 @endsection
