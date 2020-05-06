@@ -11,6 +11,13 @@
 |
 */
 
+
+Routeget('intall',function(){
+   Artisan::call("storage:link");
+   Return redirect("/");
+});
+
+/*
 Route::get('/', function () {
     return view('index');
 });
@@ -18,7 +25,7 @@ Route::get('/', function () {
 Route::get('/compreya', function () {
     return view('index');
 });
-
+*/
 Route::get('/fqa', function () {
     return view('fqa');
 });
