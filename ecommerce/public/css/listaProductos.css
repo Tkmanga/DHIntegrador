@@ -1,0 +1,65 @@
+main {
+	background-color: rgb(209, 218, 249);
+}
+
+body{
+  background-color: rgb(209,218,249); 
+}
+.vip-products {
+  overflow: hidden;
+}
+.navbar-nav {
+  margin-left: auto;
+}
+header{
+  background-color: black;
+}
+
+.imagen {
+  
+}
+
+section#servicios {
+  color:  rgb(62, 160,228) ;
+  text-align: center;
+  margin-top: 20px;
+  background-color: white;
+  font-style: italic;
+  font-family: "Proxima Nova",-apple-system,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif,sans-serif;
+}
+
+section#servicios>article{
+  height: 80px;
+}
+
+h1{
+  color:lightslategray;
+  font-family: "Proxima Nova",-apple-system,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif,sans-serif;
+  margin-top: 3px;
+}
+
+img{
+  height: 350;
+  
+}
+
+.photo-container {
+  overflow: hidden;
+}
+.photo-container .photo {
+  position: relative;
+  width: 100%;
+  right: 0px;
+  float: left;
+  border-radius: 30px;
+}
+
+.photo-container .special {
+  position: absolute;
+  height: 50px;
+  left:0px;
+}
+
+.page-footer{
+  color:lightslategray;
+}
